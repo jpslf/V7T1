@@ -11,7 +11,7 @@ abstract class Book {
 	int copies;
 
 	void displayinfo() {
-		System.out.println(String.format("Nimi: %s, Kirjailija %s, Sivut %d, Määrä: %d", title, author, pages, copies));
+		System.out.println(String.format("Nimi: %s, Kirjailija: %s, Sivut: %d, Määrä: %d", title, author, pages, copies));
 	}
 
 	abstract String categorize();
@@ -100,6 +100,8 @@ class Library {
 
 			System.out.println(String.format("Kirjan kategoria: %s", book.categorize()));
 		}
+
+		System.out.println(String.format("Kirjojen määrä kirjastossa on: %d", books.size()));
 	}
 
 	void borrow(String title) {
@@ -222,8 +224,8 @@ class Impl {
 	}
 
 	boolean run() {
-		System.out.println("1) Lisää Kirja");
-		System.out.println("2) Listaa Kirjat");
+		System.out.println("1) Lisää kirja");
+		System.out.println("2) Listaa kirjat");
 		System.out.println("3) Lainaa fiktiokirja");
 		System.out.println("4) Palauta fiktiokirja");
 
