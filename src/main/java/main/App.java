@@ -95,13 +95,17 @@ class Library {
 	}
 
 	void listBooks() {
+		int count = 0;
+
 		for (Book book : books) {
 			book.displayinfo();
+
+			count += book.copies;
 
 			System.out.println(String.format("Kirjan kategoria: %s", book.categorize()));
 		}
 
-		System.out.println(String.format("Kirjojen määrä kirjastossa on: %d", books.size()));
+		System.out.println(String.format("Kirjojen määrä kirjastossa on: %d", count));
 	}
 
 	void borrow(String title) {
