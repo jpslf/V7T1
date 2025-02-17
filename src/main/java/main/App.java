@@ -114,10 +114,11 @@ class Library {
 				if (book instanceof Borrowable) {
 					((Borrowable)book).borrow();
 
-					return;
 				} else {
 					System.out.println("Kirjaa ei löytynyt tai sitä ei voi lainata.");
 				}
+
+				return;
 			}
 		}
 
@@ -129,11 +130,11 @@ class Library {
 			if (book.title.equals(title)) {
 				if (book instanceof Borrowable) {
 					((Borrowable)book).returnBook();
-
-					return;
 				} else {
 					System.out.println("Kirjaa ei löytynyt tai sitä ei voi palauttaa.");
 				}
+
+				return;
 			}
 		}
 
