@@ -110,7 +110,7 @@ class Library {
 
 	void borrow(String title) {
 		for (Book book : books) {
-			if (book.title == title) {
+			if (book.title.equals(title)) {
 				if (book instanceof Borrowable) {
 					((Borrowable)book).borrow();
 
@@ -126,7 +126,7 @@ class Library {
 
 	void returnBook(String title) {
 		for (Book book : books) {
-			if (book.title == title) {
+			if (book.title.equals(title)) {
 				if (book instanceof Borrowable) {
 					((Borrowable)book).returnBook();
 
