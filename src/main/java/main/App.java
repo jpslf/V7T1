@@ -114,8 +114,6 @@ class Library {
 				if (book instanceof Borrowable) {
 					((Borrowable)book).borrow();
 
-					System.out.println("Kirja Tuntematon Sotilas on nyt lainattu.");
-
 					return;
 				} else {
 					System.out.println("Kirjaa ei löytynyt tai sitä ei voi lainata.");
@@ -130,9 +128,7 @@ class Library {
 		for (Book book : books) {
 			if (book.title == title) {
 				if (book instanceof Borrowable) {
-					((Borrowable)book).borrow();
-
-					System.out.println("Kirja Tuntematon Sotilas on palautettu.");
+					((Borrowable)book).returnBook();
 
 					return;
 				} else {
