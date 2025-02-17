@@ -1,0 +1,1 @@
+mvn package & java -cp target/V7T1-1.0-SNAPSHOT.jar main.App
